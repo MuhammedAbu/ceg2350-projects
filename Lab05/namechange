@@ -1,0 +1,44 @@
+#!/bin/bash
+ printhelp () {
+	                           echo"Usage: namechange -f find -r replace string to modify
+				            -f The text to find in the filename       -r The replacement text for the new filename"
+										  }
+while getopts ":hf:r:" opt; do
+case $opt in
+	h)
+		echo "h was given printhelp"
+		printhelp
+		exit
+		  
+		;;
+
+	f) f=$OPTARG
+	       	
+		
+		;;
+	
+	r) r=$OPTARG 
+		;;
+		
+	\?)	"Invalid option: -$OPTARG" >&2
+		      exit 1
+		            ;;
+		
+
+
+	esac
+done
+
+
+fname=$1
+if [[ -e $fname ]]; then
+	mv $1 $(echo "$1" | sed -E 's/$f/$r/g')
+	# mv po_ $(echo "po_" | sed 's/o/q/g') example
+	else
+		        echo "User must provide valid filename"
+			printhelp
+			
+			        
+			fi
+
+

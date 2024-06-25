@@ -1,0 +1,29 @@
+#!/bin/bash
+
+while getopts ":hf:r:" opt; do
+case $opt in
+	h)
+		echo "h was given printing help"
+		usasgeGuide
+		exit
+		;;
+
+	f) f=$OPTARG
+	       	
+		
+		;;
+	
+	r) r=$OPTARG
+		;;
+
+
+
+	esac
+done
+
+
+echo	"mv '$1' $(echo "$1" | sed 's/$f/$r/g')"
+#echo "po_" | sed 's/o/q/g' example
+	
+
+

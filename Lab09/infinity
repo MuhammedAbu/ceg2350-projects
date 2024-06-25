@@ -1,0 +1,14 @@
+#! /bin/bash
+
+
+# Runs an infinity while loop. Appends the output of echo into the text file.
+# Then echoes "Press ctrl+c to exit" into command line. Sleeps for 15 seconds,
+# and then repeats.
+
+while :
+do
+        echo "Still going!" >> still-going.txt
+	echo "Press <CTRL+C> to exit."
+	sleep 15
+done
+

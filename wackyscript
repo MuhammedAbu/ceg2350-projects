@@ -1,0 +1,34 @@
+#!/bin/bash
+
+Hello_world() {
+	echo "Hello World"
+	
+}
+
+Hello_world()
+
+printf " Give me a number: "
+read userNum
+echo "User num is $userNum"
+echo 'User num is $userNum'
+
+file_count=$(ls | wc -l)
+file_count=`ls | wc -l`
+
+echo " File count in current dir is $file_count"
+
+for i in {0..100..5}
+do
+		printf "$i"
+	done
+	
+echo 
+
+for element in Hydrogen Helium Lithium Berylium 
+do
+	echo "Element: $element"
+done
+
+
+
+
